@@ -1,4 +1,4 @@
-module.exports = [
+const places = [
     {
       name: 'Rye',
       hasGluten: true,
@@ -21,3 +21,4 @@ module.exports = [
     }
   ]
   
+  module.exports = places
