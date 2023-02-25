@@ -17,16 +17,10 @@ function New () {
                 <input
                     type="text"
                     name="image"
-                    id="image" 
-                />
+                    id="image" />
                 <label htmlFor="hasGluten">Has Gluten?</label>
-                <imput 
-                    type="checkbox"
-                    name="hasGluten"
-                    id="hasGluten"
-                    defaultChecked
-                />
-                <br></br>
+                <input type="checkbox" id="hasGluten" name="hasGluten"/>
+                <br />
                 <input type="submit"/>
                 </form>
                 <div className="backButton">
