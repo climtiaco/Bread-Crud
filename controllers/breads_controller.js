@@ -62,5 +62,16 @@ breads.delete('/:indexArray', (req, res) => {
   res.status(303).redirect('/breads')
 })
 
+//Update
+breads.put('/:arrayIndex', (req, res) => {
+  if(req.body.hasGluten === 'on') {
+    req.body.hasGluten = true
+  } else {
+    req.body.hasGluten = false
+  }
+  Bread[req.params.arrayIndex] = req.body
+  res.redirect(`/breads/${req.params.arrayIndex}`)
+})
+
 
 module.exports = breads
