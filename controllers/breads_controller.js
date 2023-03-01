@@ -43,6 +43,13 @@ breads.post('/', (req, res) => {
     res.redirect('/breads')
   })
   
+  // EDIT
+breads.get('/:indexArray/edit', (req, res) => {
+  res.render('edit', {
+    bread: Bread[req.params.indexArray],
+    index: req.params.indexArray
+  })
+})
 
 //Show
 breads.get('/:arrayIndex', (req, res) => {
@@ -72,6 +79,9 @@ breads.put('/:arrayIndex', (req, res) => {
   Bread[req.params.arrayIndex] = req.body
   res.redirect(`/breads/${req.params.arrayIndex}`)
 })
+
+
+
 
 
 module.exports = breads
